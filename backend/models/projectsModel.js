@@ -1,16 +1,5 @@
 import mongoose, { mongo } from "mongoose";
 
-const proponentSchema = new mongoose.Schema({
-    lastName: {
-        type: String,
-        require: true
-    },
-    firstName: {
-        type: String,
-        required: true
-    }
-})
-
 const keywordSchema = new mongoose.Schema({
     keyword: {
         type: String,
@@ -31,18 +20,18 @@ const projectSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
-    modifiedDate: {
-        type: Date,
-        required: true
-    },
+    // modifiedDate: {
+    //     type: Date,
+    //     required: true
+    // },
     abstract: {
         type: String,
         required: true
     },
-    keywords: {
-        type: [keywordSchema],
-        required: true
-    }
+    // keywords: {
+    //     type: [keywordSchema],
+    //     required: true
+    // }
 }, {
     timestamps: true
 })
