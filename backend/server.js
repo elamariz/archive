@@ -35,6 +35,3 @@ app.listen(5001, () => {
     connectDB();
     console.log("Server started at http://localhost:5001")
 });
-
-// username: rrosco
-// password: ztw0lM2KjU8aOLat

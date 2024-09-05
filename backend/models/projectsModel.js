@@ -28,10 +28,6 @@ const projectSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
-    modifiedDate: {
-        type: Date,
-        default: Date.now
-    },
     abstract: {
         type: String,
         required: true
