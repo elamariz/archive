@@ -12,26 +12,34 @@ const projectSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    proponents: {
-        type: [proponentSchema],
-        required: true
-    },
+    proponents: [
+        {
+            lastName: {
+                type: String,
+                required: true
+            },
+            firstName: {
+                type: String,
+                required: true
+            },
+        }
+    ],
     publishedDate: {
         type: Date,
         required: true
     },
-    // modifiedDate: {
-    //     type: Date,
-    //     required: true
-    // },
+    modifiedDate: {
+        type: Date,
+        default: Date.now
+    },
     abstract: {
         type: String,
         required: true
     },
-    // keywords: {
-    //     type: [keywordSchema],
-    //     required: true
-    // }
+    keywords: {
+        type: [String],
+        required: true
+    }
 }, {
     timestamps: true
 })

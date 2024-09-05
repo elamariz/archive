@@ -16,11 +16,7 @@ app.use(express.json());
 app.post("/api/projects", async (req,res) => {
     const project = req.body;
 
-    // if (!project.title || !project.proponents || !project.publishedDate || !project.modifiedDate || !project.abstract || !project.keywords) {
-    //     return res.status(400).json({ success: false, message: "Please fill all fields" });
-    // }
-
-    if (!project.title || !project.publishedDate || !project.abstract || !project.keywords) {
+    if (!project.title || !project.proponents || !project.publishedDate || !project.abstract || !project.keywords) {
         return res.status(400).json({ success: false, message: "Please fill all fields" });
     }
 
