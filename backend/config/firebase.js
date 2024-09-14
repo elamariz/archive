@@ -8,7 +8,7 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDqsFvRzv5w9XgASL2DuNedhyzLTAZJDvk",
+  apiKey: process.env.APIKEY,
   authDomain: "rare-archive.firebaseapp.com",
   projectId: "rare-archive",
   storageBucket: "rare-archive.appspot.com",
