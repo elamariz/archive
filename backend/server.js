@@ -1,7 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db.js';
-import projectRoutes from './routes/projectsRoute.js'
+import projectRoutes from './routes/projectsRoute.js';
+import adminRoute from './routes/adminRoute.js';
 
 dotenv.config();
 
@@ -15,7 +16,8 @@ app.get("/", (req,res) => {
 // middleware
 app.use(express.json());
 
-app.use("/api/projects", projectRoutes)
+app.use("/api/projects", projectRoutes);
+app.use("/api/admin", adminRoute);
 
 app.listen(PORT, () => {
     connectDB();
