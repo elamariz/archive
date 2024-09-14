@@ -1,0 +1,37 @@
+a{
+    text-decoration: none;
+
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav div{
+    align-self: center;
+}
+
+
+.user-options{
+    display: flex;
+    align-items: center;
+}
+.nav div a{
+    margin: 0 1rem;
+}
+
+.nav div a span{
+    color: var(--fnt-clr-secondary);
+}
+
+.loginButton{
+    cursor: pointer;
+    color: var(--fnt-clr-secondary);
+
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1.5px var(--fnt-clr-secondary) solid;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+}
