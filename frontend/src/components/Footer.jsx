@@ -1,4 +1,5 @@
 import React from 'react'
+import './Footer.css'
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
             <a href="">Privacy</a>
             <a href="">Contact Us</a>
         </div>
-        <div className="foorter-information">
+        <div className="footer-information">
             <span>© 2024 Ateneo de Naga University, Ateneo Avenue, Naga City,
             4400 Philippines</span>
         </div>
