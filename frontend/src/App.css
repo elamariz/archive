@@ -1,5 +1,5 @@
 
-*{
+body{
   background-color: var(--bg-clr);
   color: var(--fnt-clr-primary);
 }
@@ -7,15 +7,23 @@
 .content{
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.Display{
-  font-family: Grifter;
-  color:var(--clr-gray-secondary);
-  font-size: 4rem;
+
+#no-of-projects{
+  font-weight: 700;
 }
-.Display_2{
-  font-family: Grifter;
-  color:var(--clr-yellow-primary);
-  font-size: 4rem;
+
+.archiveSearch-img{
+  margin-bottom: 1rem;
 }
+.search-page-wrapper{
+  align-self: center;
+  margin: auto 0;
+  width: 70rem;
+}
+
+
+

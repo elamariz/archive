@@ -3,30 +3,42 @@
   src: url('../fonts/grifterbold.otf');
 }
 
-:root{
 
-  /*bg colors*/
+*{
+  margin: 0;
+  padding: 0;
+  
+   /* Disable the highlight */
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   -o-user-select: none;
+   user-select: none;
+}
+
+:root {
+  
+  /* Background and font colors */
   --bg-clr: #FCFCFC;
-
-  /*font colors*/
   --fnt-clr-primary: #202124;
   --fnt-clr-secondary: #575858;
-
   --fnt-clr-gray: #999CA4;
 
-  /*colors*/
+  /* Other colors */
   --clr-yellow-primary: #E7A90A;
   --clr-gray-secondary: #AFB5BF;
-  
-  /*other specifications*/
+
+  /* Other specifications */
   font-family: "Inter", sans-serif;
   --border-radius: 8px;
+
+  /* Apply transition globally */
+  transition: all 0.5s ease, color 0.5s ease;
 }
-/* [data-theme="dark"]{
- 
+
+[data-theme="dark"] {
   --bg-clr: #202124;
-  
   --fnt-clr-primary: #FFFFFF;
   --fnt-clr-secondary: #575858;
-
-} */
+}
