@@ -1,8 +1,9 @@
 .Search-wrapper{
     display: flex;
 }
+
 .input-wrapper{
-    background-color: #FFFFFF;
+    background-color: transparent;
     width: 100%;
     border: 1.5px #AFB5BF solid;
     border-radius: var(--border-radius);
@@ -27,7 +28,7 @@ input:focus {
 }
 
 #search-icon{
-    color: #AFB5BF;
+    color: var(--clr-gray-secondary);
 }
 ::placeholder{
     color: #AFB5BF;

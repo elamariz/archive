@@ -1,10 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import moonIcon from '../assets/moon.svg';
+import sunIcon from '../assets/sun.svg';
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(() => {
+    // Retrieve theme from localStorage or set default based on system preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      return savedTheme;
+    }
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return systemPrefersDark ? 'dark' : 'light';
+  });
 
+  // Update the theme attribute on the document and save to localStorage
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {
@@ -12,18 +24,28 @@ const ThemeToggle = () => {
   };
 
   return (
-    <button onClick={toggleTheme} className="theme-toggle" aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}>
-      {theme === 'light' ? (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="icon sun-icon">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 2v2m6.364-1.636l-1.414 1.414M20 12h2m-1.636-6.364l-1.414-1.414M12 20v2m-6.364-1.636l1.414-1.414M4 12H2m1.636 6.364l1.414 1.414M12 4a8 8 0 100 16 8 8 0 000-16z" />
-        </svg>
-      ) : (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="icon moon-icon">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 118.646 3.646a7 7 0 1011.708 11.708z" />
-        </svg>
-      )}
+    <button onClick={toggleTheme} style={styles.button}>
+      <img
+        src={theme === 'light' ? moonIcon : sunIcon}
+        alt={theme === 'light' ? 'Dark mode' : 'Light mode'}
+        style={styles.icon}
+      />
     </button>
   );
+};
+
+const styles = {
+  button: {
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    fontSize: '24px',
+    padding: '10px',
+  },
+  icon: {
+    width: '24px',
+    height: '24px',
+  },
 };
 
 export default ThemeToggle;

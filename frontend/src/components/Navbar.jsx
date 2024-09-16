@@ -2,7 +2,7 @@ import React from 'react'
 import archiveLogo from '../assets/archive-full.svg'
 import darkMode from '../assets/moon.svg'
 import './Navbar.css'
-// import ThemeToggle from './components/ThemeToggle'
+import ThemeToggle from './ThemeToggle'
 
 const Navbar = () => {
   return (
@@ -14,14 +14,13 @@ const Navbar = () => {
       <div className='user-options'>
         <a href="" className='browseButton'>Browse Projects</a>
         <button className='loginButton'>Log in as Admin</button>
-      
-        <a href=""><img src={darkMode} alt="" /></a>
+        <div className="ThemeToggle">
+          <ThemeToggle />
+        </div>
+        
         
       </div>
-      {/* <ThemeToggle 
-        isChecked={isDark}
-        handleChange={() => setIsDark(!isDark)}
-      /> */}
+      
     </div>
   )
 }

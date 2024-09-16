@@ -10,11 +10,10 @@ import MainSearchBar from './components/MainSearchbar';
 
 
 function App() {
-  const [isDark, setIsDark] = useState(true);
   return (
     <>
-    <div className="content"  data-theme="dark">
-      <Navbar className='Navbar'/>
+    <div className="content">
+      <Navbar/>
 
       <div className="search-page-wrapper">
         <div className="archiveSearch-img">
