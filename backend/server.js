@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 app.use(cors(
     {
-        origin: ["project-archive-rho.vercel.app"],
+        origin: ["projectarchive.vercel.app"],
         methods: ["POST", "DELETE", "GET", "PUT"],
         credentials: true
     }
