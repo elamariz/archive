@@ -25,13 +25,19 @@ a{
     display: flex;
     align-items: center;
 }
-.nav div a{
-    margin: 0 1rem;
-}
 
 .nav div a span{
     color: var(--fnt-clr-secondary);
 }
+
+.nav div a{
+    margin: 0 1rem;
+}
+
+.ThemeToggle{
+    margin: 0 0.50rem;
+}
+
 
 .loginButton{
     cursor: pointer;
