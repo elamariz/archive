@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 app.use(cors(
     {
-        origin: ["archive-tau-woad.vercel.app"],
+        origin: ["project-archive-rho.vercel.app"],
         methods: ["POST", "DELETE", "GET", "PUT"],
         credentials: true
     }
@@ -25,18 +25,9 @@ app.use(express.json());
 
 app.use("/api/projects", projectRoutes);
 app.use("/api/admin", adminRoute);
-
 app.get("/", (req, res) => {
     res.status(201).json({success: true, message: "Server is ready"})
 })
-
-// if (process.env.NODE_ENV === "production") {
-//     app.use(express.static(path.join(__dirname, "/frontend/dist")));
-//     app.get("*", (req, res) => {
-//         console.log("render react success");
-//         res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
-//     })
-// }
 
 app.listen(PORT, () => {
     connectDB();
