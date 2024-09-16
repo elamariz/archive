@@ -1,8 +1,15 @@
 import React from 'react'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 const BrowseProject = () => {
   return (
-    <div>BrowseProject</div>
+    <div>
+      <Navbar />
+
+
+      <Footer />
+    </div>
   )
 }
 
