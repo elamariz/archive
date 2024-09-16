@@ -4,10 +4,18 @@ import { connectDB } from './config/db.js';
 import projectRoutes from './routes/projectsRoute.js';
 import adminRoute from './routes/adminRoute.js';
 import path from "path";
+import cors from "cors";
 
 dotenv.config();
 
 const app = express();
+app.use(cors(
+    {
+        origin: ["archive-tau-woad.vercel.app"],
+        methods: ["POST", "DELETE", "GET", "PUT"],
+        credentials: true
+    }
+))
 const PORT = process.env.PORT || 5011
 
 const __dirname = path.resolve();
