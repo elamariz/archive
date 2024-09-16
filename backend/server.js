@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 app.use(cors(
     {
-        origin: ["archive-tau-woad.vercel.app"],
+        origin: ["archive-three-psi.vercel.app"],
         methods: ["POST", "DELETE", "GET", "PUT"],
         credentials: true
     }
