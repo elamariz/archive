@@ -1,6 +1,7 @@
 .Search-wrapper{
     display: flex;
-}
+    
+} 
 
 .input-wrapper{
     background-color: transparent;
@@ -11,6 +12,7 @@
     padding: 0 1rem;
     display: flex;
     align-items: center;
+    
     
 }
 
@@ -36,7 +38,6 @@ input:focus {
 }
 .Search-wrapper button{
     cursor: pointer;
-
     border: none;
     background-color: var(--clr-yellow-primary);
     border-radius: var(--border-radius);

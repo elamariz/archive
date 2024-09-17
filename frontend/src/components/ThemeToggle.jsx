@@ -4,7 +4,6 @@ import sunIcon from '../assets/sun.svg';
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState(() => {
-    // Retrieve theme from localStorage or set default based on system preference
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       return savedTheme;
@@ -13,7 +12,6 @@ const ThemeToggle = () => {
     return systemPrefersDark ? 'dark' : 'light';
   });
 
-  // Update the theme attribute on the document and save to localStorage
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);

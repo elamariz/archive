@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
-import "./MainSearchBar.css";
+import "./BrowseSearchbar.css";
 
-export const MainSearchBar = ({ setResults }) => {
+export const BrowseSearchbar = ({ setResults }) => {
   const [input, setInput] = useState("");
 
-  //fetch data from database here -- remove jsonplaceholder link or the entire fetch function
+  //fetch data from database -- remove jsonplaceholder link or the entire fetch function
   const fetchData = (value) => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
@@ -40,7 +40,7 @@ export const MainSearchBar = ({ setResults }) => {
 };
 
 
-export default MainSearchBar;
+export default BrowseSearchbar;
 
 
 // Searchbar YT Link - frontend siya nag fetch using API
